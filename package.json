@@ -8,6 +8,11 @@
   "dependencies": {
     "express": "3.4.5",
     "jade": "*",
-    "less-middleware": "*"
+    "less-middleware": "*",
+    "dot-emc": "~0.1.2",
+    "marked": "~0.2.10",
+    "json-front-matter": "~0.1.4",
+    "underscore": "~1.5.2",
+    "shortid": "~2.0.0"
   }
 }

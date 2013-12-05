@@ -1,0 +1,196 @@
+<html>
+<head>
+	<title>Some Title</title>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lustria|Droid+Serif|Roboto">
+	<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="lhs">
+	<div class="nav-header">
+		<div class="gr-wrapper">
+			<div class="draw-h br"><div class="curve"></div></div>
+			<div class="cont-h right">
+				<div class="draw-w bb"><div class="curve ctr"></div></div>
+				<div class="cont-w bottom">
+					<div class="draw-h bl right"><div class="curve cbr"></div></div>
+					<div class="cont-h">
+						<div class="draw-w bt bottom"><div class="curve cbl"></div></div>
+						<div class="cont-w">
+							<div class="gr-wrapper">
+								<div class="draw-h br"><div class="curve"></div></div>
+								<div class="cont-h right">
+									<div class="draw-w bb"><div class="curve ctr"></div></div>
+									<div class="cont-w bottom">
+										<div class="draw-h bl right"><div class="curve cbr"></div></div>
+										<div class="cont-h">
+											<div class="draw-w bt bottom"><div class="curve cbl"></div></div>
+											<div class="cont-w">
+												<div class="gr-wrapper">
+													<div class="draw-h br"><div class="curve"></div></div>
+													<div class="cont-h right">
+														<div class="draw-w bb"><div class="curve ctr"></div></div>
+													</div>
+												</div>
+											</div>
+										</div>				
+									</div>	
+								</div>
+							</div>				
+						</div>
+					</div>				
+				</div>	
+			</div>
+		</div>
+	</div>	
+	<div class="nav-details">
+		<div class="main-title">
+			<div class="compression">COMPRESSION</div>
+			<div class="addict">ADDICT</div>
+		</div>
+		<div>About</div>
+		<div>Contact</div>		
+	</div>
+</div>
+<div class="rhs">
+	<div class="content">
+		<article class="post">
+			<h1>Experience; A computational hypothesis</h1>
+			<p><br></p>
+			<p>
+				<a href="http://mattway.xxx/wp-content/uploads/2012/09/mind_games_by_mariano_petitdemurat.jpg">
+					<img class="post-image" title="mind_games_by_mariano_petitdemurat" src="http://mattway.xxx/wp-content/uploads/2012/09/mind_games_by_mariano_petitdemurat-300x188.jpg" alt="" width="300" height="188">
+				</a><br>
+				<small>picture by <a title="Mind Games" href="http://mariano-petitdemurat.deviantart.com/art/Mind-Games-312203702" target="_blank">Mariano PetitDeMurat</a></small>
+			</p>
+			<p>&nbsp;</p>
+			<p><span class="boxed-title">Preface</span></p>
+			<p></p>
+			<p style="text-align: justify;">To paraphrase Dennett, everybody believes they are an expert on consciousness and subjective experience. The problem with this stance however, is that every discussion is met with significant passion, but unfortunately little substance. I wanted to write this article so that I could share some of the ideas and studies I have come across over my years of neuroscience, and computer science research. I particularly want to do two things. Firstly I want to add some more food for thought to the topic of qualia (or the hard problem). Secondly, using this information, I want to provide a mechanistic hypothesis of how you could potentially implement software that has subjective experience, in the same way humans do. This article is aimed at people who already have a general understanding of what the hard problem is, but if you are interested in the topic and want to continue, I have created some links below which I suggest for background reading.</p>
+				<ul>
+					<li><a title="The Hard Problem of Consciousness" href="http://en.wikipedia.org/wiki/Hard_problem_of_consciousness" target="_blank">The Hard Problem of Consciousness</a></li>
+					<li><a title="Qualia" href="http://en.wikipedia.org/wiki/Qualia" target="_blank">Qualia</a></li>
+					<li><a title="Consciousness" href="http://en.wikipedia.org/wiki/Consciousness" target="_blank">Consciousness</a></li>
+				</ul>
+			<p><span id="more-6092"></span></p>
+			<p>&nbsp;</p>
+			<p><span class="boxed-title">Introduction</span></p>
+			<p></p>
+			<p style="text-align: justify;">Lets start by imagining that you are a software engineer that has been commissioned to create some software. The specification has a seemingly simple requirement, “Write software that experiences.” Many would simply walk away touting impossibilities or a lack of theoretical ground work, but like a ballsy developer, you dive in and try to deconstruct and simplify the problem. What is experience? What does it mean to experience? Is experience something, and if so what is it made of? These are all questions that have plagued philosophers and scientists for quite some time, but you realise that your problem has been already packaged into a nice simplification. All you have to do is create qualia.</p>
+			<p style="text-align: justify;">
+			</p><blockquote class="quotation_2">
+			From wikipedia: “Qualia is a term used in philosophy to refer to individual instances of subjective, conscious experience.”
+			<p></p></blockquote>
+			<p style="text-align: justify;">The keyword here is instances, meaning that your problem has now been simplified further. We now only need to construct a single instance of qualia in software to achieve our goal. So do we decide to try and implement a headache, happiness, redness? Before trying to formulate an answer I&nbsp;have put together four short sections below, outlining important issues and observations relating to qualia. I feel that they will have an effect on how we determine the next course of action.</p>
+			<p>&nbsp;</p>
+			<p><span class="boxed-title"><em>Qualia Discussion</em></span></p>
+			<p></p>
+			<p><span class="boxed-title">The Table of Experience</span></p>
+			<p></p>
+			<p style="text-align: justify;">So far we are approaching the problem from the common stand point, which requires asking questions like, “What are the properties of redness?” or “What is the difference between redness and blueness?”. Unfortunately these are the unanswered questions where the difficulty of this topic arises. So what can we say we do know about qualia? It seems as though the only thing we can say is that each quale are different to one another, although that difference cannot be specified. This leaves us with an ever complicating problem. Below is a picture of some of the sensory apparatus that are associated with the vast sets of qualia that we can list. If we were to suppose that we could indeed describe redness in such a way that it satisfied a solution to the hard problem, we would still be left back at the drawing board, as we would then have to also describe the massively large set of other qualia. A coherent complete description of redness would tell us nothing about smell, let alone anything about unknown potential qualia. If qualia truly are axiomatic in nature, then this largely inelegant set begs the question, “If our perspective renders the set irreducible, could we be approaching this problem incorrectly?” Science has had much success in the past abstracting the commonalities of data sets, to eventually reach theories that can simplify prior complexities. Are we able to do the same thing to qualia? Can we ask the question of whether or not qualia are indeed axiomatic?</p>
+			<p><a href="http://mattway.xxx/wp-content/uploads/2012/09/sensory-apparatus.jpg"><img class="size-full wp-image-6057 alignnone" title="sensory-apparatus" src="http://mattway.xxx/wp-content/uploads/2012/09/sensory-apparatus.jpg" alt="" width="610" height="325"></a></p>
+			<p><em><small>various qualia related sensory modalities</small></em></p>
+			<p>&nbsp;</p>
+			<p><span class="boxed-title">Consciousness Antedation and Microconsciousness</span></p>
+			<p></p>
+			<p style="text-align: justify;">It takes varying time for the signals generated from your sensory apparatus to reach your brain. Once these signals have reached their destination, it has been shown that there is a delay period of up to half a second before a conscious claim of awareness of the signal is made. Hopefully this is where you question this data and ask, “Wouldn’t my experience have a constant feeling of lag if this were the case?” Anybody who has watched a movie with the sound lagging by half a second would agree that this small amount of time is noticable. Unintuitively however, experiments have shown that while the claim of conscious awareness lags by half a second, the time reported by the subject of when they were conscious of the event is antedated by the lag period. The picture below should describe the phenomenon more clearly.</p>
+			<p><a href="http://mattway.xxx/wp-content/uploads/2012/09/conscious-antedation1.png"><img class="size-full wp-image-6058 alignnone" title="conscious-antedation" src="http://mattway.xxx/wp-content/uploads/2012/09/conscious-antedation1.png" alt="" width="610" height="240"></a><br>
+			<em><small>consciousness antedation</small></em></p>
+			<p style="text-align: justify;">This seems to raise an interesting paradox with regards to the qualia position. To put simply, if you claim you feel pain before your brain is able to process the sensory data from the environment, then <em>when</em>&nbsp;do qualia emerge? While this doesn’t disprove qualia outright, it does show that if qualia are indeed real, then they also have a temporal component. What this means is that subjective conscious perception is no longer dependent on the objective time of associated neural processing. For example, if a pattern of neural activity was said to correlate with pain perception, the time at which you claim you felt the pain would have no temporal correlation with the examined activity. Furthermore, and often overlooked, this temporal fracturing supports a basis for explaining how the brain could account for the binding problem (how the unity of conscious perception is brought about by the distributed activities of the central nervous system). More specifically, it removes the binding problem altogether, because it throws into question what is in fact bound, or more importantly, that integration does not need temporal synchronisation (that the brain could, for lack of a better word ‘sew’ our stream of consciousness together over large time periods).</p>
+			<p>&nbsp;</p>
+			<p><span class="boxed-title">Conscious Resolution and Data Types</span></p>
+			<p></p>
+			<p style="text-align: justify;">One area of conscious perception commonly overlooked is that of conscious resolution. By that I mean the resolution of the experience itself, in the same light as I would be talking about the resolution of a digital cameras sensor. This should be obvious when you consider that you cannot <em>zoom</em> your vision to see more detail than your retina will allow. This fact does not disprove qualias existence either, however it shows a one to one relationship between the bodies sensory resolution capabilities and the resolution of subjective experience. This works not only in regards to the spatial domain, but also in the temporal domain, as there is even a resolution limit at which you can distinguish between shades of colour, or frequency of sound. This raises a very important challenge to qualia. If all the information about the environment is already encoded by the senses, then what information could qualia add, and where would that information come from (see <a title="Mary's Room" href="http://en.wikipedia.org/wiki/Mary's_room" target="_blank">Mary’s Room</a>)? One more interesting thing to note about this area, is the way in which the senses actually encode data. Every sensory organ converts information to or from <a href="http://en.wikipedia.org/wiki/Neural_coding" target="_blank">neural spike trains</a>. This&nbsp;means, that aside from differences in the spatio-temporal patterns of the data being provided, each bit of sensory information sent to the brain is in the same format.</p>
+			<p>&nbsp;</p>
+			<p><span class="boxed-title">The Problem of Intuition</span></p>
+			<p></p>
+			<p style="text-align: justify;">One of the major roadblocks to qualia is that you are unable to prove to me that you experience at all, let alone that your experience is built from a set of experiential elements. This can be shown by simplifying the human system and creating a mechanical input/output equivalent for comparison. If a chat bot said that it was experiencing pain, would you believe it? We wouldn’t rationally attribute this subjective “extra” to our mechanical counterpart, so why do we seem so insistent on allowing this inclusion for humans? The primary reason for this allowance, is that we consider our physiological similarites and extend our <em><strong>belief</strong></em> of our own subjective experience to others. This unfortunately roots this entire discussion in an argument from intuition. So can you trust your intuition? Can you use it as evidence? If human scientific history is anything to go by, this would be a bad idea. Flat Earth, <a title="Geocentric Model" href="http://en.wikipedia.org/wiki/Geocentric_model" target="_blank">Geocentrism</a>, <a title="Aether Theories" href="http://en.wikipedia.org/wiki/Aether_theories" target="_blank">Aether</a>, <a title="Vitalism" href="http://en.wikipedia.org/wiki/Vitalism" target="_blank">Vitalism</a>, etc. are just a few of the ideas that I am sure were intuitively sound at one time, but have since been proven incorrect. I believe the basis for clutching to the idea of attributing a <em>special</em> process, <a title="Epiphenomenon" href="http://en.wikipedia.org/wiki/Epiphenomenon" target="_blank">epiphenomenon</a>, or substance to consciousness comes from an evolved sense of self importance. It could be logically speculated as to how self importance would prove to be an evolutionary advantage to the human species, and could also play a role in why consciousness evolved at all.</p>
+			<p>&nbsp;</p>
+			<p><span class="boxed-title"><em>Proposed Solution</em></span></p>
+			<p></p>
+			<p><span class="boxed-title">The Splitting Mistake</span></p>
+			<p></p>
+			<p style="text-align: justify;">So then, is there another way we can approach the hard problem whilst avoiding the issues above? What if we examine the basis for the intuition of qualia itself, and how a change in perspective may rectify some conflicts. Below is an image of what I imagine the common understanding of qualia to be built from.</p>
+			<p><a href="http://mattway.xxx/wp-content/uploads/2012/09/splitting_problem.jpg"><img class="alignnone size-full wp-image-6059" title="splitting_problem" src="http://mattway.xxx/wp-content/uploads/2012/09/splitting_problem.jpg" alt="" width="610" height="640"></a></p>
+			<p>&nbsp;</p>
+			<p style="text-align: justify;">Humans tend to split the concept of self, and the concept of the <em>stuff</em> of experience into two separate entities. This is enforced by famous positions such as <a title="Cogito ergo sum" href="http://en.wikipedia.org/wiki/Cogito_ergo_sum" target="_blank">cogito ergo sum</a>, and I would like to posit that I believe this is a mistake. It is understandable why this train of intuition arises when you consider that the situation appears to be a one-to-many (one self, experiencing many components of experience). I think this splitting presupposes the existence of qualia to begin with, but can be simplified.</p>
+			<p style="text-align: justify;">In the separation picture, it is shown that while the world of experience itself seems to contain reds, blues, smells, sounds, emotions, etc., there is only a seemingly single self. This self is the focal point of association between all the experiential data, learned concepts, memories, etc., but is there any weight to it? Are there any properties of the self that you can define without calling upon these associations? In other words, what is the self other than the conglomerate of learned sensory associations and concepts? Is the self really necessary in this picture? I propose that rather than looking at experience as a play between the experiencer and a set of experiential elements, we instead label the conscious self as a set of associated beliefs. If we remove the self from the picture above, and treat each belief as an associate of other beliefs and concepts, then we simply need to define the belief states and associations themselves. This makes the tapestry of experience a matrix of beliefs, rather than a matrix of undefinable substances of experience.</p>
+			<p>&nbsp;</p>
+			<p><span class="boxed-title">Computational Implementation of Experience</span></p>
+			<p></p>
+			<p style="text-align: justify;">Considering the above issues surrounding qualia, I concede that to define redness itself in software still comes across as an impossibility. Using the idea however of associative beliefs, what if instead of trying to define redness, we defined the state of experiencing redness (ie. the belief of experiencing something called redness at the time)? To explain in more detail, instead of trying to solve the problem of defining both redness and the self experiencing this redness separately, let’s create a software state that represents both of these ideas boxed together (experiencing-redness singular). As software is simply the relationships between states, this state of experiencing redness acts as a relationship between anything else we desire in our program. I will use a crude c# example to illustrate this process simplified.</p>
+			<pre class="wp-code-highlight prettyprint"><span class="kwd">using</span><span class="pln"> </span><span class="typ">System</span><span class="pun">;</span><span class="pln">
+
+				</span><span class="kwd">namespace</span><span class="pln"> </span><span class="typ">Qualia</span><span class="pln">
+				</span><span class="pun">{</span><span class="pln">
+				    </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Program</span><span class="pln">
+				    </span><span class="pun">{</span><span class="pln">
+				        </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">bool</span><span class="pln"> experiencing_red </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+
+				        </span><span class="com">// alters the subjective state when a key is pressed</span><span class="pln">
+				        </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">bool</span><span class="pln"> </span><span class="typ">ProcessKey</span><span class="pun">(</span><span class="typ">ConsoleKey</span><span class="pln"> _key</span><span class="pun">)</span><span class="pln">
+				        </span><span class="pun">{</span><span class="pln">
+				            </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">_key </span><span class="pun">==</span><span class="pln"> </span><span class="typ">ConsoleKey</span><span class="pun">.</span><span class="typ">Escape</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+
+				            </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">_key </span><span class="pun">==</span><span class="pln"> </span><span class="typ">ConsoleKey</span><span class="pun">.</span><span class="pln">R</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+				                experiencing_red </span><span class="pun">=</span><span class="pln"> </span><span class="pun">!</span><span class="pln">experiencing_red</span><span class="pun">;</span><span class="pln">
+				            </span><span class="pun">}</span><span class="pln">
+
+				            </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+				        </span><span class="pun">}</span><span class="pln">
+
+				        </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> </span><span class="typ">Main</span><span class="pun">(</span><span class="kwd">string</span><span class="pun">[]</span><span class="pln"> args</span><span class="pun">)</span><span class="pln">
+				        </span><span class="pun">{</span><span class="pln">
+				            </span><span class="com">// loop until escape is pressed (alive/dead)</span><span class="pln">
+				            </span><span class="kwd">do</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+				                </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(!</span><span class="typ">Console</span><span class="pun">.</span><span class="typ">KeyAvailable</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+				                    </span><span class="com">// at each instant in time react based on the subjective state</span><span class="pln">
+				                    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">experiencing_red</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+				                        </span><span class="com">// do any work/behaviour here when experiencing red</span><span class="pln">
+				                        </span><span class="typ">Console</span><span class="pun">.</span><span class="typ">Write</span><span class="pun">(</span><span class="str">"I believe I am experiencing red    "</span><span class="pun">);</span><span class="pln">
+				                    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+				                        </span><span class="com">// do any work/behaviour here when not experience red</span><span class="pln">
+				                        </span><span class="typ">Console</span><span class="pun">.</span><span class="typ">Write</span><span class="pun">(</span><span class="str">"I believe I am not experiencing red"</span><span class="pun">);</span><span class="pln">
+				                    </span><span class="pun">}</span><span class="pln">
+				                    </span><span class="typ">Console</span><span class="pun">.</span><span class="typ">SetCursorPosition</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+				                </span><span class="pun">}</span><span class="pln">
+				            </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="typ">ProcessKey</span><span class="pun">(</span><span class="typ">Console</span><span class="pun">.</span><span class="typ">ReadKey</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">).</span><span class="typ">Key</span><span class="pun">));</span><span class="pln">
+				        </span><span class="pun">}</span><span class="pln">
+				    </span><span class="pun">}</span><span class="pln">
+				</span><span class="pun">}</span></pre>
+				<p>&nbsp;</p>
+				<p style="text-align: justify;">Now this program works on a single binary state variable representing experiencing one quale. When you press ‘R’ you toggle the software between two subjective states, which in our case we have labelled experiencing redness and not experiencing redness, although these labels are arbitrary. In the case of a human being, we have an enormously complicated architecture that could potentially represent a practically infinite set of possible experiential states which are also associated with countless other potential states and behaviours. “But all you have done is manipulated a number/memory/etc, where is the redness?” While it may be unintuitive, my response as discussed above, is simply that there is no redness. Can you not also directly manipulate neural states to achieve changes in conscious belief? To these people I put forward this question,</p>
+				<p style="text-align: justify;">
+				</p><blockquote class="quotation_2">
+				What is the difference between someone who believes they are experiencing red, and someone who actually is (if qualia was real)?
+				<p></p></blockquote>
+				<p style="text-align: justify;">How would you know if you were the first person in this example or the second? The fact is that you wouldn’t, but this is where a rational person should adopt Occam’s Razor. The elegance of this position lies in the fact that beliefs can be easily represented in software (or in the case of the brain, neural states). This is because a belief is simply a relationship between data and other beliefs (ie. in the code example above, experiencing-redness is a belief state represented by a <a title="Boolean" href="http://en.wikipedia.org/wiki/Boolean" target="_blank">boolean</a>, which is associated with text output behaviours).</p>
+				<p>&nbsp;</p>
+				<p><span class="boxed-title">The Brain and Experience</span></p>
+				<p></p>
+				<p style="text-align: justify;">I am not going to try and give an explanation of how the brain works (perhaps over my next few blog posts), as this is a massive topic outside the scope of this article. I do however, want to add some insights into a problematic area of research that falls within the popular consciousness and neuroscience topics. I want to make the point that I believe looking for a supposed <a href="http://en.wikipedia.org/wiki/Neural_correlates_of_consciousness" target="_blank">neural correlate of consciousness</a> is a red herring. Firstly because almost every part of the brain has been associated in one way or another to consciousness in some regard. Also that almost all parts of the brain can be removed individually without destroying consciousness entirely. Secondly I find this hunt to be akin to a hypothetical hunt for say, the cpu correlate of Windows, which you can hopefully infer some underlying problems. My point is that studying computational compartments of the brain makes some sense due to the parallel nature of the architecture (ie. proximal neurons will likely contribute to a larger common function at any given time). However consciousness envelopes the entire brain, and depends completely on the context of discussion.</p>
+				<p style="text-align: justify;">So how does this relate back to qualia and the hard problem? Conscious antedation has shown that the time of neural processing is not dependent on the time of believed conscious experience and vice versa. I have also proposed that conscious experience is built from associations between belief states, which means it is also not dependent on the spatial location of neural processes. To understand this, imagine that a video game world could be loaded onto a contiguous chunk of memory, or sparsely represented by many remote locations whilst achieving functional equivalency.</p>
+				<p>&nbsp;</p>
+				<p><span class="boxed-title">Conclusion</span></p>
+				<p></p>
+				<p style="text-align: justify;">It is my belief that consciousness is not special; Not an extra substance, force, or epiphenomenon, but rather a process of computation no different to that running on the machine you are reading this on. To be more philosophically precise, I believe human beings are <a title="Philosophical zombie" href="http://en.wikipedia.org/wiki/Philosophical_zombie" target="_blank">p-zombies</a>. That at the heart of this discussion lies a mistaken intuition, coupled with a misplaced evolutionary desire for self importance. This article is by no means a proof, and only designed as a place I can summarise some of my studies over previous years. I do however wish to emphasise that the onus really is on the qualia proponents, no matter how strong or globally shared this intuition is. As with other fundamental concepts such as god, it appears impossible to conclusively prove the negative. I don’t feel this issue could be put to rest until we are able to have intelligent conversations with learning machines, built upon the computational principles of the human brain. Even then, I feel as though the debates will be abundant. I am sure that if that day comes you will really need to provide evidence other than an intuitive plea. If you disagree with this article, I urge you to put together an argument that shows how an intelligent android, built with an associative subjective matrix like the one described above differs to you. I once again urge you to at least muster the courage to question your foundational intuitions. As for the implications of this information being accurate, I leave that up to you.</p>
+				<p style="text-align: justify;">If there is anything you believe needs to be added to this article, or something you don’t understand and want elaborated please contact me. This is part of my primary area of research, and as such I only seek the best answers regardless of the implications, so I welcome healthy skepticism and debate. Also, if there are any similar topics you would like me to write about let me know.</p>
+				<p>&nbsp;</p>
+	<div class="module-title-meta">
+					<div class="meta-avatar"><img alt="" src="http://1.gravatar.com/avatar/d91b1cd631c80a2b933513016fe06f00?s=28&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D28&amp;r=G" class="avatar avatar-28 photo" height="28" width="28"></div>
+					<div class="meta-text">			
+						<span class="fat delimiter">By <a href="http://mattway.xxx/author/admin/" title="Posts by Matt Way" rel="author">Matt Way</a> on September 23, 2012</span>
+						
+						
+												<span>Last modified on September 26th, 2012 at 2:51 am</span>
+
+<br>
+
+				
+				<span class="delimiter">Filed in:   <a href="http://mattway.xxx/category/coding/" title="View all posts in Coding" rel="category tag">Coding</a>, <a href="http://mattway.xxx/category/neuroscience/" title="View all posts in Neuroscience" rel="category tag">Neuroscience</a>, <a href="http://mattway.xxx/category/philosophy-of-mind/" title="View all posts in Philosophy of Mind" rel="category tag">Philosophy of Mind</a></span>
+				<a href="http://mattway.xxx/qualia-article/#comments">4 comments</a>		
+	</div></div>	
+	</article>
+	</div>
+</div>
+</body>
+</html>
