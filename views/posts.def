@@ -1,3 +1,14 @@
 This is a post!
 
 {{=it.item.content.preview}}
+
+{{? it.item.previous}}
+	<div><a href="{{=it.item.previous.uri}}">Previous</a></div>
+{{?}}
+{{? it.item.next}}
+	<div><a href="{{=it.item.next.uri}}">Next</a></div>
+{{?}}
+
+{{~it.item.related :value:index}}
+	<div><a href="{{=value.uri}}">{{=value.content.meta.title}}</a></div>
+{{~}}

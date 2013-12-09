@@ -115,6 +115,7 @@ Stark.prototype.processFile = function(app, name, item) {
 		body: marked(parsed.body),
 		preview: marked(prevText)
 	};
+	console.log(util.inspect(item.content.meta));
 
 	// store the file in the global recent list
 	self.site.recent.push(item);
@@ -133,9 +134,9 @@ function traverseBranch(item, branch, catArray, catIndex, catIgnore) {
 	for(var i in branch){
 		if(i !== 'parent'){
 			var curItem = branch[i];
-			if(curItem.id && curItem.id !== item.id){
+			if(curItem.id && curItem.id !== item.id){				
 				item.related.push(curItem);
-			}else if(curItem.category && curItem.category !== catIgnore){
+			}else if(curItem.category && curItem.category !== catIgnore){				
 				catArray.push(curItem);
 			}		
 		}
@@ -163,7 +164,7 @@ Stark.prototype.buildRelated = function(item) {
 	var catBranch = item.parent;
 	// the branch to ignore, to stop infinite recursion
 	var ignoreId = null;
-	
+
 	// walk the tree doing a breadth first search, adding to the related array
 	// until the list has enough items, or the tree has been walked
 	while(!traverseBranch(item, catBranch, [], 0, ignoreId) && catBranch.parent){
@@ -175,8 +176,10 @@ Stark.prototype.buildRelated = function(item) {
 	_.sortBy(item.related, function(item){
 		return item.content.meta.date;
 	});
-	// TODO: array prune
-
+	// prune the related list to a maximum length
+	if(item.related.length > relatedN){
+		item.related = item.related.slice(relatedN - 1);
+	}
 };
 
 Stark.prototype.getSite = function() {

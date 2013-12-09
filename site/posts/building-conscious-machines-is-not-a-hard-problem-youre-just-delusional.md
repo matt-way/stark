@@ -16,7 +16,7 @@ To paraphrase Dennett, everybody believes they are an expert on consciousness an
 * [The Hard Problem of Consciousness](http://en.wikipedia.org/wiki/Hard_problem_of_consciousness)
 * [Qualia](http://en.wikipedia.org/wiki/Qualia)
 * [Consciousness](http://en.wikipedia.org/wiki/Consciousness)
-
+<!-- preview -->
 ####Introduction
 
 Lets start by imagining that you are a software engineer that has been commissioned to create some software. The specification has a seemingly simple requirement, “Write software that experiences.” Many would simply walk away touting impossibilities or a lack of theoretical ground work, but like a ballsy developer, you dive in and try to deconstruct and simplify the problem. What is experience? What does it mean to experience? Is experience something, and if so what is it made of? These are all questions that have plagued philosophers and scientists for quite some time, but you realise that your problem has been already packaged into a nice simplification. All you have to do is create qualia.
