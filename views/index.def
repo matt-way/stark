@@ -47,8 +47,19 @@
 			<div class="compression">COMPRESSION</div>
 			<div class="addict">ADDICT</div>
 		</div>
-		<div>About</div>
-		<div>Contact</div>		
+		<div>Recent Posts</div>
+		<div>
+			{{~it.recent :value:index}}
+				<div>{{=value.meta.title}}!</div>
+			{{~}}
+		</div>
+		<div>About Life/Work/Me</div>
+		<div>@_MattWay</div>
+		<div>Projects</div>
+		<div>Nurture</div>
+		<div>memeBig</div>
+		<div>Qrate.tv</div>
+		<div>stark</div>		
 	</div>
 </div>
 <div class="rhs">

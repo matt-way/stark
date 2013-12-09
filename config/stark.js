@@ -8,25 +8,47 @@ var fs = require('fs'),
 var util = require('util');
 
 var shortId = require('shortid');
-// seed id generator with constant secret
+// seed id generator
 shortId.seed(8992);
 
 // init marked settings
 marked.setOptions({ gfm: true, breaks: true });
-  
+// the code for the preview stop
 var previewStop = '<!-- preview -->';
+
+// the number of items to collect for categorically related list
+var relatedN = 5;
 
 // Stark primary object
 function Stark() {
-	this.site = {};
+	this.site = {
+		items: {},
+		recent: []
+	};
 	this.defaultView = 'pages';	
 }
 
 // called on app start to load the blog system
+// This is completed in sync, as all files need to be loaded to take care
+// of post loading requirements like building recent and related lists
 Stark.prototype.init = function(app, done) {
+	var self = this;
 	// recursively go through the site folder, building the site hierarchy
 	// pass in updating parameters
-	this.processFolder(app, app.get('site'), this.defaultView, '', this.site);
+	this.processFolder(app, app.get('site'), this.defaultView, '', this.site.items);
+	// sort the recent list by the date descending
+	_.sortBy(this.site.recent, function(item){
+		return item.content.meta.date;
+	});
+	// use the recent list to build the previous/next refs, and the related list for each post
+	_.each(this.site.recent, function(item, index, list){
+		if(index > 0){
+			list[index - 1].next = item;
+			item.previous = list[index - 1];			
+		}
+		self.buildRelated(item);
+	});
+	
 	return this;	
 };
 
@@ -44,16 +66,21 @@ Stark.prototype.processFolder = function(app, dir, view, uri, branch) {
 		if(stats && stats.isDirectory()){	
 			// if this is a base folder, set the view to this type
 			// NOTE: in the future the view selection could be made more complex
-			var curView = (uri.length > 0) ? view : file;			
-			branch[file] = {};
-			self.processFolder(app, fullpath, curView, uri + '/' + file, branch[file]);
+			var curView = (uri.length > 0) ? view : file;	
+			var uriPiece = uri + '/' + file;		
+			branch[file] = { 
+				parent: branch, 
+				category: uriPiece 
+			};
+			self.processFolder(app, fullpath, curView, uriPiece, branch[file]);
 		}else{			
 			// init the file values
 			var filename = file.split('.')[0];
 			branch[filename] = {
 				uri: uri + '/' + filename,
 				view: view,
-				filepath: fullpath
+				filepath: fullpath,
+				parent: branch
 			};
 			// parse the file
 			self.processFile(app, filename, branch[filename]);
@@ -62,51 +89,94 @@ Stark.prototype.processFolder = function(app, dir, view, uri, branch) {
 };
 
 // parses the given file, putting the results into the current branch
-Stark.prototype.processFile = function(app, name, branch) {
+Stark.prototype.processFile = function(app, name, item) {
 	var self = this;
 
 	// give the file an id
-	branch.id = shortId.generate();
+	item.id = shortId.generate();
+
+	// preload the json headers, and unprocessed markdown
+	var data = fs.readFileSync(item.filepath, 'utf-8');
+
+	// parse the meta, and markdown
+	// NOTE: the markdown could be parsed lazily, but doesn't really seem needed
+	var parsed = jsonfm.parse(data);
+
+	// build the preview and full text		
+	var prevText = parsed.body;
+	if(~parsed.body.indexOf(previewStop)){
+		prevText = prevText.split(previewStop)[0];
+	}else if(parsed.attributes.previewLength){
+		prevText = prevText.substr(0, parsed.attributes.previewLength);
+	}
+
+	item.content = {
+		meta: parsed.attributes,			
+		body: marked(parsed.body),
+		preview: marked(prevText)
+	};
+
+	// store the file in the global recent list
+	self.site.recent.push(item);
 
 	// setup the route for the file
-	app.get(branch.uri, function(req, res, next){
-		self.getContent(branch, function(err, item){
-			if(err) { return next('Item exists, but could not be loaded: ' + err); }
-
-			console.log(util.inspect(item, false, null));
-			res.render(branch.view, { site: self.site, item: item });
-		});		
+	app.get(item.uri, function(req, res, next){
+		//console.log(util.inspect(item, false, null));
+		res.render(item.view, { site: self.site, item: item });		
 	});
 };
 
-// called by route to retrieve content, loading and parsing if it hasn't already been placed into cache
-Stark.prototype.getContent = function(item, done) {
-	// if the content has already been loaded ignore
-	if(item.content){
-		return done(null, item);
-	}
-	// load the file
-	fs.readFile(item.filepath, 'utf-8', function(err, data){
-		if(err) { return done(err); }
-
-		var parsed = jsonfm.parse(data);
-
-		// build the preview and full text		
-		var prevText = parsed.body;
-		if(~parsed.body.indexOf(previewStop)){
-			prevText = prevText.split(previewStop)[0];
-		}else if(parsed.attributes.previewLength){
-			prevText = prevText.substr(0, parsed.attributes.previewLength);
+// traverse a single category branch, storing items for related grab
+function traverseBranch(item, branch, catArray, catIndex, catIgnore) {
+	// loop through all the children in the current branch, separating
+	// files from child categories
+	for(var i in branch){
+		if(i !== 'parent'){
+			var curItem = branch[i];
+			if(curItem.id && curItem.id !== item.id){
+				item.related.push(curItem);
+			}else if(curItem.category && curItem.category !== catIgnore){
+				catArray.push(curItem);
+			}		
 		}
+	}
+	
+	if(item.related.length >= relatedN){
+		// stop if the related length has reached the requirement
+		return true;
+	}else if(catIndex >= catArray.length){
+		// stop if there are no more child branches to traverse
+		return false;
+	}else{
+		// recurse the next category child
+		return traverseBranch(item, catArray[catIndex], catArray, catIndex + 1, catIgnore);
+	}			
+}
 
-		item.content = {
-			meta: parsed.attributes,			
-			body: marked(parsed.body),
-			preview: marked(prevText)
-		};
-
-		done(null, item);
+// builds a list of related posts by traversing the category tree
+// starting at the current items category, and finding the most recent, 
+// category related posts
+Stark.prototype.buildRelated = function(item) {
+	// the array to store the related n items
+	item.related = [];
+	// the initial branch to start the traversal
+	var catBranch = item.parent;
+	// the branch to ignore, to stop infinite recursion
+	var ignoreId = null;
+	
+	// walk the tree doing a breadth first search, adding to the related array
+	// until the list has enough items, or the tree has been walked
+	while(!traverseBranch(item, catBranch, [], 0, ignoreId) && catBranch.parent){
+		ignoreId = catBranch.category;
+		catBranch = catBranch.parent;	
+	}
+	
+	// finally sort and prune the related array
+	_.sortBy(item.related, function(item){
+		return item.content.meta.date;
 	});
+	// TODO: array prune
+
 };
 
 Stark.prototype.getSite = function() {
