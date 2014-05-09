@@ -1,17 +1,14 @@
 {{{
-	"title" : "Building conscious machines is not a Hard Problem, you're just delusional",
-	"date" : "2012-09-23"
+	"title" : "Building conscious machines - The Hard Problem Delusion",
+	"date" : "2012-09-23",
+    "author" : "<a href=\"http://twitter.com/_MattWay\" target=\"_blank\">Matt Way</a>",
+    "header" : "/images/mind_games.jpg",
+    "headerNote" : "image by <a href=\"http://mariano-petitdemurat.deviantart.com/art/Mind-Games-312203702\" target=\"_blank\">Mariano Petit de Murat</a> & <a href=\"http://theflannelgraph.tumblr.com/\" target=\"_blank\">Maddie Chaffer</a>"
 }}}
-
-#Building conscious machines is not a *Hard Problem*, you're just delusional!
-#####23-09-2012
-
-![Mind Games](http://mattway.xxx/wp-content/uploads/2012/09/mind_games_by_mariano_petitdemurat.jpg)
-<small>picture by <a href="http://mariano-petitdemurat.deviantart.com/art/Mind-Games-312203702" target="_blank">Mariano Petit de Murat</a> & <a href="http://theflannelgraph.tumblr.com/" target="_blank">Maddie Chaffer</a></small>
 
 ####Preface
 
-To paraphrase Dennett, everybody believes they are an expert on consciousness and subjective experience. The problem with this stance however, is that every discussion is met with significant passion, but unfortunately little substance. I want to share some of the ideas and studies I have come across over my years of neuroscience, and computer science research, particularly to do two things. Firstly I want to add some more food for thought to the topic of qualia (or the hard problem). Secondly, using this information, I want to provide a mechanistic hypothesis of how you could potentially implement software that has subjective experience, in the same way humans do. If you don't already have a basic understanding of what the hard problem of consciousness is, I have created a few links below that should put you on the same page.
+To paraphrase Dennett, everybody believes they are an expert on consciousness and subjective experience. The problem with this position, is that every discussion is met with significant passion, but unfortunately little substance. I want to share some of the ideas and studies I have come across over my years of neuroscience, and computer science research, particularly to do two things. Firstly I want to add some more food for thought to the topic of qualia (or the hard problem). Secondly, using this information, I want to provide a mechanistic hypothesis of how you could potentially implement software that has subjective experience, in the same way humans do. Read the wikipedia links provided below if you need to get up to speed with the associated topics.
 
 * [The Hard Problem of Consciousness](http://en.wikipedia.org/wiki/Hard_problem_of_consciousness)
 * [Qualia](http://en.wikipedia.org/wiki/Qualia)
@@ -122,7 +119,7 @@ How would you know if you were the first person in this example or the second? T
 
 ####The Brain and Experience
 
-I am not going to try and give an explanation of how the brain works (perhaps over my next few blog posts), as this is a massive topic outside the scope of this article. I do however, want to add some insights into a problematic area of research that falls within the popular consciousness and neuroscience topics. I want to make the point that I believe looking for a supposed [neural correlate of consciousness] is a red herring. Firstly because almost every part of the brain has been associated in one way or another to consciousness in some regard. Also that almost all parts of the brain can be removed individually without destroying consciousness entirely. Secondly I find this hunt to be akin to a hypothetical hunt for say, the cpu correlate of Windows, which you can hopefully infer some underlying problems. My point is that studying computational compartments of the brain makes some sense due to the parallel nature of the architecture (ie. proximal neurons will likely contribute to a larger common function at any given time). However consciousness envelopes the entire brain, and depends completely on the context of discussion.
+I am not going to try and give an explanation of how the brain works (many more posts to come), as this is a massive topic outside the scope of this article. I do however, want to add some insights into a problematic area of research that falls within the popular consciousness and neuroscience topics. I want to make the point that I believe looking for a supposed [neural correlate of consciousness] is a red herring. Firstly because almost every part of the brain has been associated in one way or another to consciousness in some regard. Also that almost all parts of the brain can be removed individually without destroying consciousness entirely. Secondly I find this hunt to be akin to a hypothetical hunt for say, the cpu correlate of Windows, which you can hopefully infer some underlying problems. My point is that studying computational compartments of the brain makes some sense due to the parallel nature of the architecture (ie. proximal neurons will likely contribute to a larger common function at any given time). However consciousness envelopes the entire brain, and depends completely on the context of discussion.
 
 [neural correlate of consciousness]: http://en.wikipedia.org/wiki/Neural_correlates_of_consciousness
 

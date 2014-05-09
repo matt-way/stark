@@ -8,8 +8,6 @@ var fs = require('fs'),
 var util = require('util');
 
 var shortId = require('shortid');
-// seed id generator
-shortId.seed(8992);
 
 // init marked settings
 marked.setOptions({ gfm: true, breaks: true });
@@ -25,7 +23,7 @@ function Stark() {
 		items: {},
 		recent: []
 	};
-	this.defaultView = 'pages';	
+	this.defaultView = 'posts';	
 }
 
 // called on app start to load the blog system
@@ -38,8 +36,9 @@ Stark.prototype.init = function(app, done) {
 	this.processFolder(app, app.get('site'), this.defaultView, '', this.site.items);
 	// sort the recent list by the date descending
 	_.sortBy(this.site.recent, function(item){
-		return item.content.meta.date;
+		return item.meta.date;
 	});
+	this.site.recent.reverse();
 	// use the recent list to build the previous/next refs, and the related list for each post
 	_.each(this.site.recent, function(item, index, list){
 		if(index > 0){
@@ -110,12 +109,12 @@ Stark.prototype.processFile = function(app, name, item) {
 		prevText = prevText.substr(0, parsed.attributes.previewLength);
 	}
 
-	item.content = {
-		meta: parsed.attributes,			
+	item.meta = parsed.attributes;
+	item.content = {		
 		body: marked(parsed.body),
 		preview: marked(prevText)
 	};
-	console.log(util.inspect(item.content.meta));
+	console.log(util.inspect(item.meta));
 
 	// store the file in the global recent list
 	self.site.recent.push(item);
@@ -174,7 +173,7 @@ Stark.prototype.buildRelated = function(item) {
 	
 	// finally sort and prune the related array
 	_.sortBy(item.related, function(item){
-		return item.content.meta.date;
+		return item.meta.date;
 	});
 	// prune the related list to a maximum length
 	if(item.related.length > relatedN){

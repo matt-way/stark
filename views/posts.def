@@ -1,5 +1,9 @@
 This is a post!
 
+{{? item.meta.headerNote }}
+	<div class="header-note">{{=item.meta.headerNote}}</div>
+{{?}}
+
 {{=it.item.content.preview}}
 
 {{? it.item.previous}}

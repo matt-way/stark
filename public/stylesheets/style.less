@@ -1,6 +1,29 @@
 
-@import './common/reset';
 
+@import './common/reset';
+@import './lesshat/lesshat';
+
+// Some reusable basic styles
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.pointy {
+	cursor: pointer;	
+}
+
+// Module styles
+
+@import './components/layout';
+@import './components/sidebar';
+@import './components/content';
+
+/*
 @gr-border-col: #a0a0a0;
 @curve-color: #ddd;
 
@@ -16,7 +39,7 @@
 	float: left;
 	min-height: 100%;
 	width: 350px;
-	//background-color: #eee;
+	background-color: #242424;
 
 	.nav-header {
 		height: 208px;
@@ -95,14 +118,27 @@
 	}
 
 	.main-title {
-		font-family: arial;
-		font-size: 19px;
-		font-weight: bold;		
-		text-align: right;
-		width: 212px;		
-		margin-top: 2px;
-		color: #111;		
+		color: #fff;
+		font-family: "Open Sans", Helvetica, Arial, sans-serif;
+		font-weight: 600;
+		font-size: 1.125em;
+		line-height: 1.375em;
+
+		margin-left: 20px;
+
 	}
+}
+
+a {
+	color: #ef4f47;
+	text-decoration: none;
+}
+
+.pic-content {
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+	background-size: 100% auto;
 }
 
 .rhs {
@@ -111,20 +147,25 @@
 	height: 100%;
 	//width: 100%;
 
+	background-color: #fafaf9;
+
 	.content {
 		max-width: 700px;
 		padding: 20px;
 		margin-left: 100px;
 
 		h1 {
-			font-family: 'Droid Serif';
-			font-size: 45px;
-			font-weight: normal;
+			font-family: 'Open Sans Condensed', sans-serif;
+			text-transform: uppercase;
+			line-height: 1;			
+			font-size: 2.6em;
+			font-weight: bold;
+			color: #111111;
 		}
 
 		p {
-			font-family: 'Lustria';
-			font-size: 22px;
+			font-family: 'Georgia', Georgia, Times, serif;
+			font-size: 1.1em;
 			line-height: 1.5em;
 			font-weight: normal;
 		}
@@ -135,5 +176,5 @@
 	}
 }
 
-
+*/
 

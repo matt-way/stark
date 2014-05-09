@@ -1,0 +1,30 @@
+<div class="sb sb-title">
+	<h3 class="title-main">Compression<br/>Addict</h3>			
+	<p>Matt Way</p>	
+</div>
+<div class="sb">
+	<h3>About</h3>
+	<ul class="links-regular">
+		<li><a href="http://twitter.com/_MattWay" target="_blank" class="pic-link"><span class="reg-icon icon-twitter"></span><span class="link-text">@_MattWay</span></a></li>
+		<li><a href="mailto:matt@compressionaddict.com" class="pic-link"><span class="reg-icon icon-mail"></span><span class="link-text">Contact Me</span></a></li>
+		<li><a><span class="link-text">What is a compression addict?</span></a></li>
+	</ul>
+</div>		
+<div class="sb sb-projects">
+	<h3 class="project-title">Projects</h3>
+	<ul class="links-buttons inline">
+		<li><a class="pic-link" href="http://nurture.ai" target="_blank"><img class="link-icon icon-nurture" src="/images/nurture.png"><span class="link-text">Nurture</span></a></li>
+		<li><a class="pic-link" href="http://memeBig.com" target="_blank"><img class="link-icon icon-mb" src="/images/memebig_2.png"><span class="link-text">memeBig</span></a></li>
+		<li><a class="pic-link" href="http://churn.tv" target="_blank"><img class="link-icon" src="/images/churn.png"><span class="link-text">Churn TV</span></a></li>
+		<li><a class="pic-link"><span class="link-text">Ruffle</span></a></li>
+		<li><a class="pic-link" href="https://github.com/matt-way/stark" target="_blank"><img class="link-icon" src="/images/stark.png"><span class="link-text">Stark Blog</span></a></li>
+	</ul>
+</div>
+<div class="sb sb-recent">
+	<h3>Recent Posts</h3>
+	<ul class="links-regular">
+		{{~it.recent :item:index}}
+			<li><a><span class="link-text">{{=item.meta.title}}</span></a></li>
+		{{~}}		
+	</ul>
+</div>	

@@ -1,0 +1,160 @@
+
+// Styles for the side bar
+
+.sidebar {
+	background-repeat: no-repeat;
+	background-size: 270px;
+	background-position: 22px -26px;
+
+	border: 2px solid #999;
+	
+	width: 100%;
+	min-height: 100%;
+	padding: 0 20px;
+	margin: 0 auto;	
+
+	h3 {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		margin-bottom: 6px;
+		text-transform: uppercase;
+		color: #fff;
+		font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	}
+
+	h3.title-main {
+		font-size: 26px;
+		line-height: 28px;
+		margin-bottom: 4px;
+	}
+
+	p {
+		font: 18px/28px "Open Sans", Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		line-height: 22px;
+		color: #ccc;
+	}
+
+	.sb {
+		margin-bottom: 30px;		
+	}
+
+	.sb-title {
+		padding-top: 20px;
+		height: 170px;				
+		margin-left: -20px;
+		padding-left: 20px;		
+		margin-bottom: 0px;		
+	}
+
+	.reg-icon {
+		vertical-align: middle;
+		margin-right: 6px;
+	}
+
+	.project-title {
+		margin-bottom: 10px;
+	}
+
+	.links-buttons {
+		display: inline-block;
+
+		li {			
+			margin: 0 10px 10px 0;			
+			height: 32px;			
+			border: 1px solid #999;
+			.border-radius(3px);
+			
+			&:hover {				
+				background-color: #fff;
+				border-color: #fff;				
+			}
+		}
+
+		a {
+			font-family: "Open Sans", Helvetica, Arial, sans-serif;
+			font-size: 14px;			
+			font-weight: 400;
+			vertical-align: middle;							
+			padding: 6px 15px 6px 15px;
+			color: #ccc;
+
+			&:hover {
+				color: #333;				
+			}
+		}
+
+		.pic-link {
+			padding-left: 0px;
+		}
+	}
+
+	.inline li {
+		display: inline-block;
+	}
+
+	.link-icon {
+		width: 30px;
+		height: 30px;
+		vertical-align: middle;
+		margin-right: 12px;
+		.border-radius(2px 0px 0px 2px);
+		padding: 3px;
+		background-color: #fff;
+	}
+
+	.icon-nurture {
+		background-color: #95c6ff;
+	}
+
+	.icon-mb {
+		background-color: #363636;
+	}
+
+	.sb-projects .link-text {
+		vertical-align: middle;
+		line-height: 31px;
+	}
+
+	.links-regular {
+
+		li {
+			height: 22px;
+		}
+
+		a {
+			font-family: "Open Sans", Helvetica, Arial, sans-serif;
+			font-size: 14px;			
+			font-weight: 400;
+			vertical-align: middle;			
+			color: #ccc;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	.sb-recent li {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: #ccc;
+	}
+}
+
+// Responsive
+
+@media (min-width: 1024px) {
+
+	.sidebar {
+		background-size: 350px;
+		background-position: 0px -50px;
+		//border: none;
+
+		.sb-title {
+			height: 218px;
+		}
+	}
+}
