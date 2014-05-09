@@ -1,0 +1,171 @@
+
+// Styles for post/page content (eg. text, titles, code, etc)
+
+@titlefont: 'Open Sans Condensed', sans-serif;
+@bodyfont: 'Georgia', Times, serif;
+
+//@linkcolor: #f57365;
+@linkcolor: #ef4f47;
+@textcolor: #111;
+
+a {
+	color: @linkcolor;
+
+	&:hover {
+		color: @linkcolor + 20;
+	}
+}
+
+.preview-header {
+	width: 100%;
+	height: 100px;
+	background: no-repeat center;
+	background-size: 100%;
+}
+
+.content {
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto;	
+	padding: 25px 15px;
+
+	font-family: @bodyfont;
+	font-size: 1.0em;
+	line-height: 1.5em;
+	font-weight: normal;
+	color: @textcolor;
+
+	h1 {
+		font-family: @titlefont;
+		text-transform: uppercase;
+		line-height: 1;					
+		font-size: 2.0em;
+		font-weight: bold;				
+		margin-bottom: 15px;
+
+		a {
+			color: @textcolor;
+
+			&:hover {
+				color: #525252;
+			}
+		}
+	}
+
+	h4 {
+		font-style: italic;		
+		margin-bottom: 15px;
+	}
+
+	.details {
+		font-size: 0.8em;
+		font-style: italic;
+		display: inline-block;
+		border-top: 0.25em solid #f1f1ee;		
+		padding-top: 6px;
+		min-width: 15em;
+		margin-bottom: 15px;
+		color: #777;
+	}
+
+	p {
+		margin-bottom: 25px;
+		//text-align: justify;
+	}
+
+	small {
+		font-size: 0.6em;
+	}
+
+	ul {
+		margin-bottom: 20px;
+	}
+
+	li {
+		font-size: 1.0em;
+	}
+}
+
+.left-gap {
+	margin-left: 10px;
+}
+
+.read-more a {	
+	margin-bottom: 20px;
+	width: auto;
+	font-family: "Open Sans", "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+	color: #ccc;
+	border: 2px solid #ccc;
+	display: inline-block;
+	font-size: 0.9em;
+	font-weight: 700;
+	padding: 10px 20px;
+	text-align: center;
+	text-transform: uppercase;
+
+	&:hover {
+		border: 2px solid @linkcolor;
+		background-color: @linkcolor;
+		color: #fff;
+	}
+}
+
+// Responsive queries
+
+@media (min-width: 768px) {
+
+	.content {
+		font-size: 1.1em;
+
+		h1 {
+			font-size: 2.6em;
+		}
+
+		.details {
+			margin-bottom: 25px;
+		}
+	}
+
+	// update font sizing for closed menu 768
+	.menu-trans {
+		.content {
+			font-size: 1.0em;
+
+			h1 {
+				font-size: 2.0em;
+			}
+
+			.details {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.menu-trans {
+		.content {
+			margin-left: 15px;			
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.menu-trans {
+		.content {
+			margin-left: 100px;
+			padding: 35px 15px;
+			font-size: 1.1em;
+
+			h1 {
+				font-size: 2.6em;
+			}
+
+			.details {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}

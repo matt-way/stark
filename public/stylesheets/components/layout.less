@@ -1,0 +1,131 @@
+
+// Styles for overall page container layout
+
+@sidebarsize: 33%;
+@togglecolor: #fff;
+
+// toggle button for menu collapse
+.toggle-button {
+	width: 36px;
+	height: 36px;
+	display: block;
+	font-size: 1.1em;
+	line-height: 35px;
+	border: 2px solid #999;
+	color: #999;
+	text-align: center;
+
+	&:hover{
+		border: 2px solid @togglecolor;
+		color: #242424;
+		background-color: @togglecolor;
+	}
+}
+
+// left hand menu column
+.lhs {
+	position: fixed;	
+	height: 100%;
+	width: 100%;
+
+	background-color: #242424;
+	left: 0;	
+
+	overflow-x: none;
+	overflow-y: auto;
+
+	.close-menu {	
+		position: fixed;
+		right: 15px;
+		top: 15px;
+	}		
+}
+
+// right hand content column
+.rhs {
+	display:block;	
+	position: relative;
+	float: right;	
+	width: 100%;
+	background-color: #fafaf9;	
+	overflow: hidden;
+	
+	left: 0;
+	.transition(all 0.5s);
+
+	.open-menu {
+		margin-top: 15px;
+		margin-left: 15px;
+		float: left;
+	}
+
+	#open-button {
+		display: none;
+		position: fixed;
+		width: 36px;
+		height: 36px;
+		padding: 9px;
+		opacity: 0.5;
+		background-color: #fafaf9;
+
+		&:hover {
+			opacity: 1;
+			border: 2px solid #999;
+			color: #999;
+		}
+	}
+}
+
+// menu is currently open
+.menu-trans {
+
+	opacity: 0;	
+	.translateX(100%);
+}
+
+.menu-show {
+	display: none;
+}
+
+// media queries (mobile first structure)
+
+@media (min-width: 768px) {
+
+	.lhs {
+		width: 50%;
+
+		.close-menu {	
+			position: fixed;
+			right: 50%;			
+			top: 0;			
+			margin-top: 15px;
+			margin-right: 15px;			
+		}
+	}
+
+	.rhs {		
+		display: block;
+		opacity: 1;
+		.translateX(0);
+		width: 100%;
+	}
+
+	.menu-trans {
+		width: 50%;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	.lhs {
+		width: 33%;
+
+		.close-menu {
+			right: 67%;
+		}
+	}
+
+	.menu-trans {
+		width: 67%;
+	}
+}
