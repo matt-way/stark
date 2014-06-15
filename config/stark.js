@@ -71,6 +71,10 @@ Stark.prototype.init = function(app, done) {
 	return this;	
 };
 
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
 // build process for site content folder
 // has lots of params because they get updated during recursion
 // app, current path, current view, current uri, current object result branch
@@ -90,7 +94,7 @@ Stark.prototype.processFolder = function(app, dir, uri, branch) {
 				category: uriPiece 
 			};
 			self.processFolder(app, fullpath, uriPiece, branch[file]);
-		}else{			
+		}else if(endsWith(file, '.md')){			
 			// init the file values
 			var filename = file.split('.')[0];
 			branch[filename] = {
