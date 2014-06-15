@@ -12,7 +12,6 @@ var app = express();
 var util = require('util');
 
 // all environments
-app.set('title', process.env.ST_TITLE || 'Stark Blog');
 app.set('port', process.env.PORT || 3000);
 app.set('site', path.join(__dirname, 'site'));
 app.set('views', path.join(__dirname, 'views'));

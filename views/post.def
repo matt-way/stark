@@ -1,0 +1,116 @@
+<html>
+<head>
+	<title>{{=it.item.meta.title}} | {{=it.site.title}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<!-- social meta -->
+	<meta name="description" content="{{=it.item.content.previewRaw}}">
+	<link rel="canonical" href="{{=it.domain}}{{=it.item.uri}}">
+
+	<!-- Facebook Open Graph meta -->
+	<meta property="og:type" content="post">
+	<meta property="og:url" content="{{=it.domain}}{{=it.item.uri}}">
+	<meta property="og:title" content="{{=it.item.meta.title}} | {{=it.site.title}}">
+	<meta property="og:description" content="{{=it.item.content.previewRaw}}">
+	{{? it.item.meta.header }}
+		<meta property="og:image" content="{{=it.domain}}{{=it.item.meta.header}}">
+	{{?}}	
+	<meta property="og:site_name" content="{{=it.site.title}}">
+
+	<!-- style includes -->
+	<link rel="shortcut icon" href="/images/favicon.ico?v=2"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,600">
+	<link href="/stylesheets/icomoon/style.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+
+	<link rel="stylesheet" href="/lib/highlight/src/styles/vs.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
+</head>
+<body>
+	<div id="lhs" class="lhs">
+		<div class="close-menu">
+			<span id="close-button" class="toggle-button icon-close pointy" title="Close"></span>									
+		</div>
+		<div class="sidebar" style="background-image: url('/images/header_back.png')">			
+			{{#def.include('sidebar')}}		
+		</div>
+	</div>
+	<div id="rhs" class="rhs">
+		<div class="post-header">
+			{{? it.item.meta.header }}
+				<div class="preview-header" style="background-image: url('{{=it.item.meta.header}}')"></div>
+			{{?}}
+		</div>
+		<div class="content">
+			<h1 class="post-title">
+				<a class="link-title" href="{{=it.item.uri}}">{{=it.item.meta.title}}</a>
+			</h1>
+			<div class="details">
+				Posted {{=it.item.meta.date}} by {{=it.item.meta.author}}
+			</div>
+			<div class="share-buttons">
+				<div class="share-button-outer">
+					<div class="share-button-inner facebook pointy" onclick="popup('https://www.facebook.com/sharer/sharer.php', 'Share Post on Facebook')">
+						<span class="icon-facebook icon"></span>Share on Facebook
+					</div>
+				</div>
+				<div class="share-button-outer">
+					<div class="share-button-inner twitter pointy" onclick="popup('https://twitter.com/share', 'Share Post on Twitter')">
+						<span class="icon-twitter icon"></span>Share on Twitter
+					</div>
+				</div>
+			</div>
+			<div class="post-body">
+				{{=it.item.content.body}}				
+			</div>
+			<div class="share-buttons">
+				<div class="share-button-outer">
+					<div class="share-button-inner facebook pointy" onclick="popup('https://www.facebook.com/sharer/sharer.php', 'Share Post on Facebook')">
+						<span class="icon-facebook icon"></span>Share on Facebook
+					</div>
+				</div>
+				<div class="share-button-outer">
+					<div class="share-button-inner twitter pointy" onclick="popup('https://twitter.com/share', 'Share Post on Twitter')">
+						<span class="icon-twitter icon"></span>Share on Twitter
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="related">
+					<div class="related-header">
+						Related Posts
+					</div>
+					<div class="related-list">
+						{{~it.item.related :item:index }}
+							<div class="related-item">
+								<a href="{{=item.uri}}">{{=item.meta.title}}</a>
+							</div>
+						{{~}}
+					</div>
+				</div>
+			</div>
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=261716000701110&version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+		</div>
+	</div>
+	<div class="open-menu">
+		<span id="open-button" class="toggle-button pointy" title="Open">
+			<svg width="15px" height="15px" xmlns="http://www.w3.org/2000/svg">
+				<rect y="6" fill="#999999" width="15" height="3"></rect>
+				<rect fill="#999999" width="15" height="3"></rect>
+				<rect y="12" fill="#999999" width="15" height="3"></rect></svg>
+		</span>			
+	</div>
+	<script>
+		hljs.configure({classPrefix: ''});
+		hljs.initHighlightingOnLoad();
+	</script>
+	<script src="/js/stark.js"></script>
+</body>
+</html>

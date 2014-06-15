@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>{{=it.domain}}/</loc>
+		<lastmod>{{=it.lastMod}}</lastmod>
+		<changefreq>weekly</changefreq>
+	<url>
+	{{~it.site.builtItems :item:index}}
+		<url>
+			<loc>{{=it.domain}}{{=item.uri}}</loc>
+			<lastmod>{{=item.meta.date}}</lastmod>
+		</url>
+	{{~}}
+</urlset>

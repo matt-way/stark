@@ -49,30 +49,36 @@
 	width: 100%;
 	background-color: #fafaf9;	
 	overflow: hidden;
+	min-height: 100%;
 	
 	left: 0;
 	.transition(all 0.5s);
+}
 
-	.open-menu {
-		margin-top: 15px;
-		margin-left: 15px;
-		float: left;
-	}
+// menu open button
+.open-menu {
+	/*
+	margin-top: 15px;
+	margin-left: 15px;
+	float: left;
+	*/
+	position: fixed;
+	top: 15px;
+	left: 15px;
+}
 
-	#open-button {
-		display: none;
-		position: fixed;
-		width: 36px;
-		height: 36px;
-		padding: 9px;
-		opacity: 0.5;
-		background-color: #fafaf9;
+#open-button {
+	display: none;
+	width: 36px;
+	height: 36px;
+	padding: 9px;
+	opacity: 0.5;
+	background-color: #fafaf9;
 
-		&:hover {
-			opacity: 1;
-			border: 2px solid #999;
-			color: #999;
-		}
+	&:hover {
+		opacity: 1;
+		border: 2px solid #999;
+		color: #999;
 	}
 }
 

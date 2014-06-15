@@ -17,7 +17,8 @@ var transitionEnd = whichTransitionEvent();
 
 var lastScroll = 0;
 
-toggleMenu(x > minOpen, true);
+var isRoot = window.location.pathname === '' || window.location.pathname === '/';
+toggleMenu(x > minOpen && isRoot, true);
 
 function toggleMenu(_open, _init) {
 	if(_open){
@@ -88,4 +89,10 @@ function whichTransitionEvent(){
             return transitions[t];
         }
     }
+}
+
+function popup(_url, _title) {
+	var params = 'width=600,height=350,toolbar=0,scrollbars=0,status=0,resizable=0,location=0,menuBar=0';//,left=,top=
+	var win = window.open(_url, _title, params);
+	win.focus();
 }

@@ -4,7 +4,6 @@
 @titlefont: 'Open Sans Condensed', sans-serif;
 @bodyfont: 'Georgia', Times, serif;
 
-//@linkcolor: #f57365;
 @linkcolor: #ef4f47;
 @textcolor: #111;
 
@@ -21,6 +20,11 @@ a {
 	height: 100px;
 	background: no-repeat center;
 	background-size: 100%;
+}
+
+.post-header .preview-header {
+	height: 50%;
+	background-size: cover;
 }
 
 .content {
@@ -55,6 +59,7 @@ a {
 	h4 {
 		font-style: italic;		
 		margin-bottom: 15px;
+		color: #000;
 	}
 
 	.details {
@@ -70,11 +75,11 @@ a {
 
 	p {
 		margin-bottom: 25px;
-		//text-align: justify;
 	}
 
 	small {
-		font-size: 0.6em;
+		font-size: 0.8em;
+		font-style: italic;
 	}
 
 	ul {
@@ -83,6 +88,35 @@ a {
 
 	li {
 		font-size: 1.0em;
+	}
+
+	blockquote {
+		font-size: 21px;
+		background-color: #FDF3F2;
+		padding: 20px 10px;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 25px;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	pre {
+		margin-bottom: 25px;
+		background-color: #F0F0F0;
+		padding: 20px;
+		overflow: auto;
+
+		code {
+			line-height: 1;
+			font-family: monospace;
+		}
 	}
 }
 
@@ -110,6 +144,70 @@ a {
 	}
 }
 
+@facebook-blue: #007ade;
+@twitter-blue: #00b6e5;
+
+.share-buttons{
+	font-size: 0px;
+	display: table;
+	width: 100%;
+	bottom: 0;
+	margin-top: -5px;
+	margin-bottom: 25px;
+	font-family: "Open Sans", "Century Gothic", "Trebuchet MS", Helvetica, sans-serif;
+
+	-moz-box-sizing:    border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing:         border-box;
+
+	.share-button-outer{
+		display: table-cell;
+
+		.share-button-inner{
+			.border-radius(3px);
+			color: #fff;
+			height: 45px;
+			text-align: center;
+			line-height: 45px;			
+			font-size: 15px;
+		}
+	}
+
+	.facebook{
+		background-color: @facebook-blue;
+		margin-right: 5px;
+
+		&:hover{background-color: darken(@facebook-blue, 4%);};
+	}
+
+	.twitter{
+		background-color: @twitter-blue;
+		margin-left: 5px;
+		&:hover{background-color: darken(@twitter-blue, 4%);};
+	}
+
+	.icon{
+		padding-right: 10px;
+		font-size: 20px;
+		vertical-align: -15%;
+	}
+}
+
+// Footer
+.footer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	.related-header {
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: 10px;
+	}
+
+
+}
+
+
 // Responsive queries
 
 @media (min-width: 768px) {
@@ -123,6 +221,18 @@ a {
 
 		.details {
 			margin-bottom: 25px;
+		}
+	}
+
+	.share-buttons{
+		.share-button-outer{
+			.share-button-inner {
+				font-size: 18px;
+			}
+		}
+
+		.icon {
+			font-size: 26px;
 		}
 	}
 

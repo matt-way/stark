@@ -1,5 +1,6 @@
 
-var fs = require('fs'),
+var env = require('./env'),
+	fs = require('fs'),
 	path = require('path'),
 	_ = require('underscore'),
 	marked = require('marked'),
@@ -21,9 +22,10 @@ var relatedN = 5;
 function Stark() {
 	this.site = {
 		items: {},
+		builtItems: [],
 		recent: []
 	};
-	this.defaultView = 'posts';	
+	this.defaultView = 'post';	
 }
 
 // called on app start to load the blog system
@@ -31,9 +33,11 @@ function Stark() {
 // of post loading requirements like building recent and related lists
 Stark.prototype.init = function(app, done) {
 	var self = this;
+
+	self.site.title = env.title;
 	// recursively go through the site folder, building the site hierarchy
 	// pass in updating parameters
-	this.processFolder(app, app.get('site'), this.defaultView, '', this.site.items);
+	this.processFolder(app, app.get('site'), '', this.site.items);
 	// sort the recent list by the date descending
 	_.sortBy(this.site.recent, function(item){
 		return item.meta.date;
@@ -47,6 +51,22 @@ Stark.prototype.init = function(app, done) {
 		}
 		self.buildRelated(item);
 	});
+
+	// get the recent list
+	var recent = self.site.recent.slice(0, 5);
+
+	// go through each item, and build the correct route
+	_.each(this.site.builtItems, function(item){
+		app.get(item.uri, function(req, res, next){
+			var domain = req.protocol + '://' + req.get('host'); 
+			res.render(item.meta.view, { 
+				site: self.site, 
+				item: item, 
+				recent: recent, 
+				domain: domain 
+			});
+		});
+	});
 	
 	return this;	
 };
@@ -54,7 +74,7 @@ Stark.prototype.init = function(app, done) {
 // build process for site content folder
 // has lots of params because they get updated during recursion
 // app, current path, current view, current uri, current object result branch
-Stark.prototype.processFolder = function(app, dir, view, uri, branch) {
+Stark.prototype.processFolder = function(app, dir, uri, branch) {
 	var self = this;
 
 	var list = fs.readdirSync(dir);
@@ -63,21 +83,18 @@ Stark.prototype.processFolder = function(app, dir, view, uri, branch) {
 		var stats = fs.statSync(fullpath);		
 
 		if(stats && stats.isDirectory()){	
-			// if this is a base folder, set the view to this type
-			// NOTE: in the future the view selection could be made more complex
-			var curView = (uri.length > 0) ? view : file;	
+			// update the uri piece and recur
 			var uriPiece = uri + '/' + file;		
 			branch[file] = { 
 				parent: branch, 
 				category: uriPiece 
 			};
-			self.processFolder(app, fullpath, curView, uriPiece, branch[file]);
+			self.processFolder(app, fullpath, uriPiece, branch[file]);
 		}else{			
 			// init the file values
 			var filename = file.split('.')[0];
 			branch[filename] = {
 				uri: uri + '/' + filename,
-				view: view,
 				filepath: fullpath,
 				parent: branch
 			};
@@ -110,20 +127,18 @@ Stark.prototype.processFile = function(app, name, item) {
 	}
 
 	item.meta = parsed.attributes;
-	item.content = {		
+	// select the default view if one isn't supplied
+	item.meta.view = item.meta.view || self.defaultView;
+	item.content = {
 		body: marked(parsed.body),
-		preview: marked(prevText)
+		preview: marked(prevText),
+		previewRaw: prevText
 	};
-	console.log(util.inspect(item.meta));
 
 	// store the file in the global recent list
 	self.site.recent.push(item);
-
-	// setup the route for the file
-	app.get(item.uri, function(req, res, next){
-		//console.log(util.inspect(item, false, null));
-		res.render(item.view, { site: self.site, item: item });		
-	});
+	// store the built items in array for later route processing
+	self.site.builtItems.push(item);
 };
 
 // traverse a single category branch, storing items for related grab
