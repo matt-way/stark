@@ -10,5 +10,3 @@ This is a sample post. Use it as a guide to start your own posts.
 <!-- preview -->
 
 Getting started is easy. Simply open your favourite text editor or online markdown tool, and start writing. Add some meta like the stuff at the top of this file, and save it as something you want in the URL. When it is done, put it into a folder of your choice (these act like categories that will be used to generate related posts), and push the changes to the repo.
-
-Also the sidebar has been left intentially stark, because individuality is all the rage. Just edit the sidebar.def file in the views folder to add any extra html you want :)

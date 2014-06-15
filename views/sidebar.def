@@ -7,7 +7,7 @@
 	<h3>Recent Posts</h3>
 	<ul class="links-regular">
 		{{~it.recent :item:index}}
-			<li><a><span class="link-text">{{=item.meta.title}}</span></a></li>
+			<li><a href="{{=item.uri}}"><span class="link-text">{{=item.meta.title}}</span></a></li>
 		{{~}}		
 	</ul>
 </div>	
