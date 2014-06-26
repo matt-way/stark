@@ -60,10 +60,11 @@ Stark.prototype.init = function(app, done) {
 		app.get(item.uri, function(req, res, next){
 			var domain = req.protocol + '://' + req.get('host'); 
 			res.render(item.meta.view, { 
-				site: self.site, 
-				item: item, 
-				recent: recent, 
-				domain: domain 
+				site: self.site,
+				item: item,
+				recent: recent,
+				domain: domain,
+				facebook: env.facebook
 			});
 		});
 	});
