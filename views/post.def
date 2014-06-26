@@ -28,15 +28,16 @@
 </head>
 <body>
 	<!-- facebook sdk for comments -->
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=261716000701110&version=v2.0";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-
+	{{? it.facebook.appId }}
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+	  	var js, fjs = d.getElementsByTagName(s)[0];
+	  	if (d.getElementById(id)) return;
+	  	js = d.createElement(s); js.id = id;
+	  	js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId={{=it.facebook.appId}}&version=v2.0";
+	  	fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	{{?}}
 	<div id="lhs" class="lhs">
 		<div class="close-menu">
 			<span id="close-button" class="toggle-button icon-close pointy" title="Close"></span>									
@@ -100,12 +101,14 @@
 						</div>
 					</div>
 				{{?}}
-				<div class="comments">
-					<div class="comments-header">Comments</div>	
-					<script>
-						document.write('<div class="fb-comments" data-href="' + window.location.href + '" data-num-posts="5" data-width="100%" data-colorscheme="light"></div>');
-					</script>
-				</div>
+				{{? it.facebook.appId }}
+					<div class="comments">
+						<div class="comments-header">Comments</div>	
+						<script>
+							document.write('<div class="fb-comments" data-href="' + window.location.href + '" data-num-posts="5" data-width="100%" data-colorscheme="light"></div>');
+						</script>
+					</div>
+				{{?}}
 			</div>
 		</div>
 	</div>
