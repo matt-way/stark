@@ -9,7 +9,7 @@
 	<ul class="links-regular">
 		<li><a href="http://twitter.com/_MattWay" target="_blank" class="pic-link"><span class="reg-icon icon-twitter"></span><span class="link-text">@_MattWay</span></a></li>
 		<li><a href="mailto:matt@compressionaddict.com" class="pic-link"><span class="reg-icon icon-mail"></span><span class="link-text">Contact Me</span></a></li>
-		<li><a><span class="link-text">What is a compression addict?</span></a></li>
+		<li><a href="/posts/mind/what-is-a-compression-addict"><span class="link-text">What is a compression addict?</span></a></li>
 	</ul>
 </div>		
 <div class="sb sb-projects">
