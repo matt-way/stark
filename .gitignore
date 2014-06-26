@@ -1,4 +1,3 @@
 node_modules/
-public/lib
-*.css
+public/stylesheets/**/*.css
 notes.txt
