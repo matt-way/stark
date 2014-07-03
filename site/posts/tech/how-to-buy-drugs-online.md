@@ -76,7 +76,9 @@ Every legitimate seller provides a public encryption key (PGP Key) that you can 
 
 As there are different tools available for different operating systems, this part may take a little bit of research on your part. The benefit is that you will be able to send encrypted messages between you and anyone you want in the future, a skill that most people should learn at some stage.
 
-You may be wondering who exactly do you address your packages to? Well it should be obvious by now not to use your actual name. The best option is to use the name of a previous occupant for which you already receive mail for. You may even already have a small pile of mail addressed to different people sitting in your house, just in case they ever contact you requesting it. When your package arrives you should place it with this other mail temporarily. This is so that in the event you receive an unwanted knock at the door, you have absolutely "no idea" what was those packages.
+You may be wondering who exactly do you address your packages to? Well it should be obvious by now not to use your actual name. The best option is to use the name of a previous occupant for which you already receive mail for. You may even already have a small pile of mail addressed to different people sitting in your house, just in case they ever contact you requesting it. When your package arrives you should place it with this other mail temporarily. This is so that in the event you receive an unwanted knock at the door, you have absolutely "no idea" what the packages are nor what content they contain.
+
+Enjoy.
 
 
 
