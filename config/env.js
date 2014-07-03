@@ -6,5 +6,8 @@ module.exports = {
 	lastMod: new Date().toJSON().slice(0,10),
 	facebook: {
 		appId: process.env.ST_FACEBOOK_APPID
+	},
+	google: {
+		trackingId: process.env.ST_GOOGLE_TRACKINGID
 	}
 };
