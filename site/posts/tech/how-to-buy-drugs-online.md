@@ -5,7 +5,7 @@
     "header" : "/images/214337.jpg"    
 }}}
 
-Drugs are great fun for the whole family. However, if your choice is outside the mainstream legal stimuli like music, alcohol, or sports, and packed into that hypocritical "illicit" basket, then you have come to the right place. Even if you have heard of sites like Silk Road, you may not know how to access them, or more importantly know how to minimise risk while using them. 
+Drugs are great fun for the whole family. However, if your choice is outside the mainstream legal stimuli like music, alcohol, or sports, and packed into that hypocritical "illicit" basket, then you have come to the right place. Even if you have heard of online marketplace sites like Silk Road, you may not know how to access them, or more importantly know how to minimise risk while using them. 
 
 It's probably a mixture of my coding background, or constant cryptocurrency championing banter, but more people have been asking me how they would go about purchasing the means to some next level experiences online. So below is a detailed step by step for converting your enslaving fiat dollars, into life changing brain hacks like MDMA and LSD. Imagine having high quality, reasonably priced drugs delivered straight to your door, while at the same time reducing [real] crime and making the world a better place.
 
@@ -18,7 +18,7 @@ The process written below is entirely hypothetical, and was put together using m
 
 ####Tor and Anonymity
 
-The first thing you need to learn about is being anonymous online. What this means is obfuscating your IP address so that it is difficult for any sites you are visiting to know your origin. To access online darknet sites, you need to use a tool like Tor. [Go to the Tor Project website] and download and install the client. To the user, Tor is essentially just a regular web browser, but operates over a worldwide network of computers that help bounce around and encrypt your IP address. The cost of this anonymity is speed, so don't fret if sites take quite a while to load, or require a refresh. 
+The first thing you need to learn about is being anonymous online. What this means is obfuscating your IP address so that it is difficult for any sites you are visiting to know your origin. To access online [dark web](http://en.wikipedia.org/wiki/Deep_Web) sites, you need to use a tool like Tor. [Go to the Tor Project website] and download and install the client. To the user, Tor is essentially just a regular web browser, but operates over a worldwide network of computers that help bounce around and encrypt your IP address. The cost of this anonymity is speed, so don't fret if sites take quite a while to load, or require a refresh. 
 
 While I believe this is enough anonymity, you can also take the further step of employing a VPN. A VPN is essentially a service where you rent a computer anywhere in the world to be your first port of call when using the internet. The information is usually encrypted, so it prevents your internet service provider from seeing that you are using things like the Tor network. There are many VPNs to choose from, and they all vary in cost and features. [HideMyAss](https://www.hidemyass.com/) is one example.
 
