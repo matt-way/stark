@@ -4,7 +4,7 @@
 		<loc>{{=it.domain}}/</loc>
 		<lastmod>{{=it.lastMod}}</lastmod>
 		<changefreq>weekly</changefreq>
-	<url>
+	</url>
 	{{~it.site.builtItems :item:index}}
 		<url>
 			<loc>{{=it.domain}}{{=item.uri}}</loc>
