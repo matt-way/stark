@@ -64,7 +64,8 @@ Stark.prototype.init = function(app, done) {
 				item: item,
 				recent: recent,
 				domain: domain,
-				facebook: env.facebook
+				facebook: env.facebook,
+				google: env.google
 			});
 		});
 	});
