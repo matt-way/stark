@@ -42,7 +42,7 @@
 		<div class="close-menu">
 			<span id="close-button" class="toggle-button icon-close pointy" title="Close"></span>									
 		</div>
-		<div class="sidebar" style="background-image: url('/images/header_back.png')">			
+		<div class="sidebar" style="background-image: url('https://s3.amazonaws.com/compressionaddict/header_back.png')">			
 			{{#def.include('sidebar')}}		
 		</div>
 	</div>

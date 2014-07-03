@@ -2,7 +2,7 @@
 	"title" : "How to buy drugs online, safely and anonymously",
 	"date" : "2014-03-20",
     "author" : "<a href=\"http://twitter.com/_MattWay\" target=\"_blank\">Matt Way</a>",
-    "header" : "/images/214337.jpg"    
+    "header" : "https://s3.amazonaws.com/compressionaddict/214337.jpg"    
 }}}
 
 Drugs are great fun for the whole family. However, if your choice is outside the mainstream legal stimuli like music, alcohol, or sports, and packed into that hypocritical "illicit" basket, then you have come to the right place. Even if you have heard of online marketplace sites like Silk Road, you may not know how to access them, or more importantly know how to minimise risk while using them. 
