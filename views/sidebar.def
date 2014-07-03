@@ -15,9 +15,9 @@
 <div class="sb sb-projects">
 	<h3 class="project-title">Projects</h3>
 	<ul class="links-buttons inline">
-		<li><a class="pic-link" href="http://www.nurture.ai" target="_blank"><img class="link-icon icon-nurture" src="/images/nurture.png"><span class="link-text">Nurture</span></a></li>
-		<li><a class="pic-link" href="http://memeBig.com" target="_blank"><img class="link-icon icon-mb" src="/images/memebig_2.png"><span class="link-text">memeBig</span></a></li>
 		<li><a class="pic-link" href="http://churn.tv" target="_blank"><img class="link-icon" src="/images/churn.png"><span class="link-text">Churn</span></a></li>
+		<li><a class="pic-link" href="http://memeBig.com" target="_blank"><img class="link-icon icon-mb" src="/images/memebig_2.png"><span class="link-text">memeBig</span></a></li>
+		<li><a class="pic-link" href="http://www.nurture.ai" target="_blank"><img class="link-icon icon-nurture" src="/images/nurture.png"><span class="link-text">Nurture</span></a></li>
 		<li><a class="pic-link" href="http://ruffle.us" target="_blank"><img class="link-icon" src="/images/ruffle.png"><span class="link-text">Ruffle</span></a></li>
 		<li><a class="pic-link" href="https://github.com/matt-way/stark" target="_blank"><img class="link-icon" src="/images/stark.png"><span class="link-text">Stark Blog</span></a></li>
 	</ul>
