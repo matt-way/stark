@@ -11,15 +11,16 @@ It's probably a mixture of my coding background, or constant cryptocurrency cham
 
 <!-- preview -->
 
-<div class="disclaimer">
-Disclaimer:
+<div class="disclaimer">Disclaimer:
 
-The process I have written below is entirely hypothetical, and was put together based on my knowledge of cryptocurrencies, the internet, and computer science. I have never used this process, but if you choose to I completely and utterly condone it.
+The process written below is entirely hypothetical, and was put together using my own research, with the help of many anonymous people online. I hopefully don't have to spell out the fact that are risks involved if you decide to follow these instructions.
 </div>
 
 ####Tor and Anonymity
 
-The first thing you need to learn about is being anonymous online. What this means is obfuscating your IP address so that it is difficult for any sites you are visiting to know your origin. To access online darknet sites, you need to use a tool like Tor. [Go to the Tor Project website] and download and install the client. To the user, Tor is essentially just a regular web browser, but operates over a worldwide network of computers that help bounce around and encrypt your IP address. The cost of this anonymity is speed, so don't fret if sites take quite a while to load, or require a refresh.
+The first thing you need to learn about is being anonymous online. What this means is obfuscating your IP address so that it is difficult for any sites you are visiting to know your origin. To access online darknet sites, you need to use a tool like Tor. [Go to the Tor Project website] and download and install the client. To the user, Tor is essentially just a regular web browser, but operates over a worldwide network of computers that help bounce around and encrypt your IP address. The cost of this anonymity is speed, so don't fret if sites take quite a while to load, or require a refresh. 
+
+While I believe this is enough anonymity, you can also take the further step of employing a VPN. A VPN is essentially a service where you rent a computer anywhere in the world to be your first port of call when using the internet. The information is usually encrypted, so it prevents your internet service provider from seeing that you are using things like the Tor network. There are many VPNs to choose from, and they all vary in cost and features. [HideMyAss](https://www.hidemyass.com/) is one example.
 
 [Go to the Tor Project website]: https://www.torproject.org/
 
@@ -58,19 +59,24 @@ You may be wondering why you even needed to create the second wallet at all. Why
 
 ####Buying Goods Online
 
-Now all you have to do is find what you want to purchase. Make sure that the seller has a good rating, and that they are happy to mail goods to your country (if buying internationally). Buying locally is by far the safest and quickest option, but depending on where you are located, it is sometimes much cheaper to look overseas. Make sure the seller uses top notch concealment practices (usually labelled as [stealth](http://www.reddit.com/r/SilkRoad/comments/1eusom/what_in_your_experience_defines_good_stealth/)). Finally, and most importantly, **buy in small quantities**. This will increase the likelihood that they will arrive, as well as making any attempt to come after you completely impractical.
+Now all you have to do is find what you want to purchase. Reading the seller feedback left by other customers is a good rating indicator. Make sure that the seller has a good rating, and that they are happy to mail goods to your country (if buying internationally). Buying locally is by far the safest and quickest option, but depending on where you are located, it is sometimes much cheaper to look overseas. Make sure the seller uses top notch concealment practices (usually labelled as [stealth](http://www.reddit.com/r/SilkRoad/comments/1eusom/what_in_your_experience_defines_good_stealth/)). Finally, and most importantly, **buy in small quantities**. This will increase the likelihood that they will arrive, as well as making any attempt to come after you completely impractical.
+
+I should also note that some sellers require that you FE (finalise early). This is also related to escrow as mentioned above. FE basically means that you end the escrow process early, releasing funds to the seller before you have ensured that your goods have arrived. You should try and avoid FE as much as possible, and only do it for sellers that have a very high rating (although even then there have been unfortunate incidents in the past). Just remember, if you do use full escrow, it is up to you to release the funds in a timely manner. Forgetting to do this demeans the entire escrow process. 
+
+When you find what you want to purchase you will need to deposit bitcoins into your marketplace account wallet. Only do this when you are completely sure what you want to purchase, and only deposit the amount you want to spend. Due to the highly fluctuating price of bitcoin, it can be a good idea to deposit slightly more than you need, as it takes time for the transfer to process, and you don't want to be left slightly short and have to transfer again. Once your marketplace account has a useful balance, you will need to enter the delivery address and complete the trade.
 
 ####PGP Encryption and a Successful Delivery
 
+> Do not enter your address in plain text on these marketplace sites.
+
+Every legitimate seller provides a public encryption key (PGP Key) that you can use to encrypt your address, or any other text communication you need to make with the seller. Encrypting text is easy once you learn how to use the right tools. One example tool is called [Kleopatra](http://www.kde.org/applications/utilities/kleopatra/), for which I have included a simple tutorial video below. Basically, you take a text file containing your text you want to encrypt (in this case your address), and a text file that contains the sellers public key, and combine them to make new encrypted text. You then paste this text in the address box of the marketplace when you make a purchase.
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/U33TbfZInEI" frameborder="0" allowfullscreen></iframe>
 
 
-4. PGP Encryption
+As there are different tools available for different operating systems, this part may take a little bit of research on your part. The benefit is that you will be able to send encrypted messages between you and anyone you want in the future, a skill that most people should learn at some stage.
 
-- putting your address onto these sites
-- use cleopatra (with more detailed instructions)
+You may be wondering who exactly do you address your packages to? Well it should be obvious by now not to use your actual name. The best option is to use the name of a previous occupant for which you already receive mail for. You may even already have a small pile of mail addressed to different people sitting in your house, just in case they ever contact you requesting it. When your package arrives you should place it with this other mail temporarily. This is so that in the event you receive an unwanted knock at the door, you have absolutely "no idea" what was those packages.
 
-5. A Successful Delivery
 
-- keep previous tenants mail around and use their names
-- only buy small amounts
 
