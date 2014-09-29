@@ -17,7 +17,7 @@ The problem here is the thinking that humans are a bubble that sits outside of t
 
 Your mum’s heart is failing, so she is getting a new one printed in a warehouse down town. Meanwhile your cousin is showing off his new eyes that can zoom in, and his new legs that are so speedy, they put sprinters to shame. You want to share this information with your friends, so you literally think it to them. All this is happening while a group of nanites are quietly cleaning up your cells of a cancer that was forming in your liver. Your life expectancy is now TBD.
 
-![](https://s3.amazonaws.com/compressionaddict/newtech.png)
+![](https://s3.amazonaws.com/compressionaddict/newtech.jpg)
 
 I cannot stress enough; **This stuff is as much science fiction as aeroplane travel was in the early 20th century!** This isn’t some guess, this stuff is here, and is only going to get better. It is also just the tip of the iceberg. The changes that are going to occur in the next one or two hundred years are going to be so dramatic that to many they may seem utterly incomprehensible. The funny thing is, you will likely be around to see it.
 
