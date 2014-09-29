@@ -8,7 +8,7 @@
 	<link rel="canonical" href="{{=it.domain}}{{=it.item.uri}}">
 
 	<!-- Facebook Open Graph meta -->
-	<meta property="og:type" content="post">
+	<meta property="og:type" content="article">
 	<meta property="og:url" content="{{=it.domain}}{{=it.item.uri}}">
 	<meta property="og:title" content="{{=it.item.meta.title}}">
 	<meta property="og:description" content="{{=it.item.content.previewRaw}}">
