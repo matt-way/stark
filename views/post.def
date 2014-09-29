@@ -10,10 +10,10 @@
 	<!-- Facebook Open Graph meta -->
 	<meta property="og:type" content="post">
 	<meta property="og:url" content="{{=it.domain}}{{=it.item.uri}}">
-	<meta property="og:title" content="{{=it.item.meta.title}} | {{=it.site.title}}">
+	<meta property="og:title" content="{{=it.item.meta.title}}">
 	<meta property="og:description" content="{{=it.item.content.previewRaw}}">
 	{{? it.item.meta.header }}
-		<meta property="og:image" content="{{=it.domain}}{{=it.item.meta.header}}">
+		<meta property="og:image" content="{{=it.item.meta.header}}">
 	{{?}}	
 	<meta property="og:site_name" content="{{=it.site.title}}">
 
