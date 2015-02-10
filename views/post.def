@@ -4,14 +4,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 	<!-- social meta -->
-	<meta name="description" content="{{=it.item.content.previewRaw}}">
+	<meta name="description" content="{{=it.item.meta.preview}}">
 	<link rel="canonical" href="{{=it.domain}}{{=it.item.uri}}">
 
 	<!-- Facebook Open Graph meta -->
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="{{=it.domain}}{{=it.item.uri}}">
 	<meta property="og:title" content="{{=it.item.meta.title}}">
-	<meta property="og:description" content="{{=it.item.content.previewRaw}}">
+	<meta property="og:description" content="{{=it.item.meta.preview}}">
 	{{? it.item.meta.header }}
 		<meta property="og:image" content="{{=it.item.meta.header}}">
 	{{?}}	
@@ -57,7 +57,13 @@
 				<a class="link-title" href="{{=it.item.uri}}">{{=it.item.meta.title}}</a>
 			</h1>
 			<div class="details">
-				Posted {{=it.item.meta.date}} by {{=it.item.meta.author}}
+				<span class="details-author">Posted {{=it.item.meta.date}} by {{=it.item.meta.author}} </span>
+				{{? it.item.meta.twitterAuthor }}
+					<span class="follow-btn">
+					<a href="https://twitter.com/{{=it.item.meta.twitterAuthor}}" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @{{=it.item.meta.twitterAuthor}}</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</span>
+				{{?}}
 			</div>
 			<div class="share-buttons">
 				<div class="share-button-outer">

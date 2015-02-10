@@ -2,7 +2,9 @@
 	"title" : "What you don’t understand about the coming robot revolution.",
 	"date" : "2014-08-15",
     "author" : "<a href=\"http://twitter.com/_MattWay\" target=\"_blank\">Matt Way</a>",
-    "header" : "https://s3.amazonaws.com/compressionaddict/robot_header.jpg"    
+    "twitterAuthor" : "_MattWay",
+    "header" : "https://s3.amazonaws.com/compressionaddict/robot_header.jpg",
+    "preview" : "How can you lose a job to yourself?"    
 }}}
 
 The media is currently rife with a dichotomy pitting humans against the coming wave of robotic automation. Everyone seems to either side with all the jobs disappearing, or that technology will endlessly create new jobs keeping the status quo. I would like to point out that both these positions are very wrong, and very short sighted.

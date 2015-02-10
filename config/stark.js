@@ -37,11 +37,12 @@ Stark.prototype.init = function(app, done) {
 	self.site.title = env.title;
 	// recursively go through the site folder, building the site hierarchy
 	// pass in updating parameters
-	this.processFolder(app, app.get('site'), '', this.site.items);
+	this.processFolder(app, app.get('site'), '', this.site.items);	
 	// sort the recent list by the date descending
-	_.sortBy(this.site.recent, function(item){
+	this.site.recent = _.sortBy(this.site.recent, function(item){
 		return item.meta.date;
 	});
+
 	this.site.recent.reverse();
 	// use the recent list to build the previous/next refs, and the related list for each post
 	_.each(this.site.recent, function(item, index, list){
