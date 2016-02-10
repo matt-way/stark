@@ -9,7 +9,7 @@ var express = require('express'),
 	favicon = require('serve-favicon'),
 	logger = require('morgan'),
 	bodyParser = require('body-parser'),
-	errorHandler = require('errorHandler');
+	errorHandler = require('errorhandler');
 
 var app = express();
 
