@@ -2,8 +2,10 @@
 	"title" : "Building conscious machines - The Hard Problem Delusion",
 	"date" : "2012-09-23",
     "author" : "<a href=\"http://twitter.com/_MattWay\" target=\"_blank\">Matt Way</a>",
+    "twitterAuthor" : "_MattWay",
     "header" : "https://s3.amazonaws.com/compressionaddict/mind_games.jpg",
-    "headerNote" : "image by <a href=\"http://mariano-petitdemurat.deviantart.com/art/Mind-Games-312203702\" target=\"_blank\">Mariano Petit de Murat</a> & <a href=\"http://theflannelgraph.tumblr.com/\" target=\"_blank\">Maddie Chaffer</a>"
+    "headerNote" : "image by <a href=\"http://mariano-petitdemurat.deviantart.com/art/Mind-Games-312203702\" target=\"_blank\">Mariano Petit de Murat</a> & <a href=\"http://theflannelgraph.tumblr.com/\" target=\"_blank\">Maddie Chaffer</a>",
+    "preview" : "I want to provide a mechanistic hypothesis of how you could potentially implement software that has subjective experience, in the same way humans do."
 }}}
 
 ####Preface

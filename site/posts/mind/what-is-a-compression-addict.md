@@ -2,7 +2,9 @@
 	"title" : "What is a Compression Addict?",
 	"date" : "2014-03-09",
 	"author" : "<a href=\"http://twitter.com/_MattWay\" target=\"_blank\">Matt Way</a>",
-	"header" : "https://s3.amazonaws.com/compressionaddict/frax-crochet_sm.jpg"
+	"twitterAuthor" : "_MattWay",
+	"header" : "https://s3.amazonaws.com/compressionaddict/frax-crochet_sm.jpg",
+	"preview" : "Would you believe me if I told you that compression is the source of most of the joy and struggle of all our lives?"
 }}}
 
 To put it as simply as I can, compression is just the way of representing something with less information than is currently representing it. Boring? Well would you believe me if I told you that this basic idea is the source of most of the joy and struggle of all our lives? 
